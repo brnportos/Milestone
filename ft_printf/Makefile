@@ -3,8 +3,13 @@ CC = cc -g
 CFLAGS = -Wall -Wextra -Werror
 
 SRC = ft_putchar.c \
-		ft_putstr.c 
-
+		ft_putstr.c \
+		ft_is_address.c \
+		ft_is_unsigned_nbr.c \
+		ft_ishexadecimal.c \
+		ft_putnbr.c \
+		ft_strlen.c \
+		ft_is_conversion.c 
 OBJ = $(SRC:%.c=%.o)
 
 all: $(NAME)
