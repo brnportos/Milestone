@@ -5,7 +5,7 @@
 
 char	*get_next_line(int fd)
 {
-	char	*buff = malloc(BUFFER_SIZE);
+	char	*buff = malloc(BUFFER_SIZE + 1);
 	char	c;
 	int		i = 0;
 	int		val = 0;
@@ -15,10 +15,10 @@ char	*get_next_line(int fd)
 	while ((val = read(fd, &c, 1)) > 0)
 	{
 		buff[i++] = c;
-		if (c == '\n')
+		if (c == '\n' || i >= BUFFER_SIZE)
 			break ;
 	}
-	if (val < 0 || i == 0)
+	if (i == 0)
 	{
 		free(buff);
 		return (NULL);

@@ -9,7 +9,8 @@ SRC = ft_putchar.c \
 		ft_ishexadecimal.c \
 		ft_putnbr.c \
 		ft_strlen.c \
-		ft_is_conversion.c 
+		ft_is_conversion.c \
+		ft_printf.c
 OBJ = $(SRC:%.c=%.o)
 
 all: $(NAME)
