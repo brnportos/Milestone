@@ -6,7 +6,7 @@
 /*   By: portos <portos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/02 20:02:09 by portos            #+#    #+#             */
-/*   Updated: 2026/05/02 20:02:27 by portos           ###   ########.fr       */
+/*   Updated: 2026/05/05 20:53:41 by portos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,11 @@ int	ft_printf(const char *str, ...)
     {
         if (*str == '%')
         {
-            if (*str + 1 <= 32)
-                return (0);
+            if (!*(str + 1))
+            {
+                va_end(ap);
+                return (-1);
+            }
             str++;
             ft_is_conversion(&ap, (char *)str, &len);
         }

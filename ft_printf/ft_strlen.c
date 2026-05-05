@@ -6,13 +6,13 @@
 /*   By: portos <portos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/01 19:41:56 by portos            #+#    #+#             */
-/*   Updated: 2026/05/01 19:41:57 by portos           ###   ########.fr       */
+/*   Updated: 2026/05/05 20:20:35 by portos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_strlen(char *str)
+int ft_strlen(const char *str)
 {
     int i;
 

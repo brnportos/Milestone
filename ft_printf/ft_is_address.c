@@ -6,7 +6,7 @@
 /*   By: portos <portos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/01 19:41:14 by portos            #+#    #+#             */
-/*   Updated: 2026/05/01 19:41:15 by portos           ###   ########.fr       */
+/*   Updated: 2026/05/05 20:31:54 by portos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,9 @@ void    is_address(void *ptr, int *len)
 {
     unsigned long long  address;
 
-    if (!ptr || !len)
+    if (!len)
+        return ;
+    if (!ptr)
     {
         ft_putstr("(nil)", len);
         return ;

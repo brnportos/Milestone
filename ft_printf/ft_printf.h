@@ -1,5 +1,5 @@
 #ifndef FT_PRINTF_H
-#define FT_PRINTF_H
+# define FT_PRINTF_H
 #include <unistd.h>
 #include <stdarg.h>
 
@@ -10,6 +10,9 @@ void    ft_putnbr(int n, int *len);
 void    ft_is_unsigned_nbr(unsigned int num, int *len);
 void    ft_islowhexadecimal(unsigned int num, int *len);
 void    ft_isuphexadecimal(unsigned int num, int *len);
-void    ft_is_conversion(va_list *ap, char *str, int *len);
+void    ft_is_conversion(va_list *ap, const char *str, int *len);
+int     ft_printf(const char *str, ...);
+int     ft_strlen(const char *str);
+
 
 #endif

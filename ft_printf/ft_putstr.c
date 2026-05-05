@@ -6,7 +6,7 @@
 /*   By: portos <portos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/01 19:41:51 by portos            #+#    #+#             */
-/*   Updated: 2026/05/01 19:41:52 by portos           ###   ########.fr       */
+/*   Updated: 2026/05/05 20:19:17 by portos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void    ft_putstr(char *str, int *len)
         return ;
     if (!str)
     {
-        ft_putstr("null", len);
+        ft_putstr("(null)", len);
         return ;
     }
     while (str[i])

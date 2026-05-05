@@ -6,13 +6,13 @@
 /*   By: portos <portos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/01 19:13:01 by portos            #+#    #+#             */
-/*   Updated: 2026/05/01 19:50:29 by portos           ###   ########.fr       */
+/*   Updated: 2026/05/05 20:39:03 by portos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void    ft_is_conversion(va_list *ap, char *str, int *len)
+void    ft_is_conversion(va_list *ap, const char *str, int *len)
 {
     if (!ap || !str || !len)
         return ;
@@ -25,7 +25,7 @@ void    ft_is_conversion(va_list *ap, char *str, int *len)
     else if (*str == 'd' || *str == 'i')
         ft_putnbr(va_arg(*ap, int), len);
     else if (*str == 'u')
-        ft_is_unsigned_nbr(va_arg(*ap, int), len);
+        ft_is_unsigned_nbr(va_arg(*ap, unsigned int), len);
     else if (*str == 'X')
         ft_isuphexadecimal(va_arg(*ap, unsigned int), len);
     else if (*str == 'x')

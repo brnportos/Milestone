@@ -6,7 +6,7 @@
 /*   By: portos <portos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/01 19:41:41 by portos            #+#    #+#             */
-/*   Updated: 2026/05/01 19:41:42 by portos           ###   ########.fr       */
+/*   Updated: 2026/05/05 20:57:37 by portos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void    ft_putchar(char c, int *len)
 {
-    if (len)
+    if (!len)
         return ;
     write(1, &c, 1);
     (*len)++;
