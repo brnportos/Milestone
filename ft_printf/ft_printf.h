@@ -3,19 +3,6 @@
 #include <unistd.h>
 #include <stdarg.h>
 
-typedef struct s_flags
-{
-    int minus;
-    int zero;
-    int dot;
-    int hash;
-    int plus;
-    int space;
-    int width;
-    int precision;
-    char type;
-}   t_flags;
-
 void    ft_putchar(char c, int *len);
 void    ft_putstr(char *str, int *len);
 void    is_address(void *ptr, int *len);
