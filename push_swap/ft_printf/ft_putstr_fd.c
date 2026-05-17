@@ -9,12 +9,12 @@ void	ft_putstr_fd(int fd, char *str, int *len)
 		return ;
 	if (!str)
 	{
-		ft_putstr(fd, "(null)", len);
+		ft_putstr_fd(fd, "(null)", len);
 		return ;
 	}
 	while (str[i])
 	{
-		ft_putchar(fd, str[i], len);
+		ft_putchar_fd(fd, str[i], len);
 		i++;
 	}
 }
